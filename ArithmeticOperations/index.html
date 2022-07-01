@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CALCULATOR</title>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <p>Digite o primeiro valor:</p><input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')"
+        id="firstValue"></input>
+    <p>Digite o segundo valor:</p><input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')"
+        id="secondValue"></input>
+    <p>Digite a operação que deseja realizar: </br>multiplicar [*];</br> dividir [/];</br> adicionar [+];</br>
+        subtrair[-]</p><input type="text" id="operation"></input>
+    <button onclick="showResult()" id="calculatorButton">CALCULAR</button>
+
+    <script>
+        function showResult() {
+            document.getElementById('average').innerHTML = calculator(firstValue.value, secondValue.value, operation.value);
+        }
+    </script>
+    <div id="average"> </div>
+</body>
+
+</html>
